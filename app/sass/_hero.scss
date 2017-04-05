@@ -1,0 +1,138 @@
+/*---------- hero ----------*/
+.hero {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 100px 20px 20px;
+  font-size: 14px;
+  color: #fff;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: -5%;
+    width: 110%;
+    height: 100%;
+    z-index: 1;
+    background-image: url("../img/hero-bg.jpg");
+    background-color: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__phone {
+    display: none;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title,
+  h2 {
+    margin-bottom: 47px;
+    font-size: 42px;
+    @include main-font2();
+
+    span {
+      display: block;
+      padding: 5px 0 0;
+      font-size: 22px;
+      font-weight: 600;
+      @include main-font1();
+    }
+  }
+
+  ul {
+
+    li {
+      position: relative;
+      padding: 0 0 0 22px;
+      margin-bottom: 20px;
+
+      &:before {
+        position: absolute;
+        top: 4px;
+        left: -3px;
+        width: 7px;
+        height: 7px;
+        border-style: solid;
+        border-width: 1px 1px 0 0;
+        border-color: #fff;
+        transform: rotate(45deg);
+        content: '';
+      }
+    }
+  }
+}
+
+@media (min-width: $phone-landscape) {
+  .hero {
+
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .hero {
+
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .hero {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .hero {
+    height: 758px;
+    padding: 150px calc(50% - 585px);
+    font-size: 16px;
+
+    &:before {
+      position: absolute;
+      right: 249px;
+      bottom: -100px;
+      width: 426px;
+      height: 726px;
+      z-index: 2;
+      background: url("../img/mobile.png") no-repeat;
+      content: '';
+      pointer-events: none;
+    }
+
+    //&__phone {
+    //  display: block;
+    //  position: absolute;
+    //  right: 249px;
+    //  bottom: -100px;
+    //  width: 452px;
+    //  height: 663px;
+    //  z-index: 3;
+    //  background: url("../img/hero-phones.png") no-repeat;
+    //  transition: transform .1s linear;
+    //}
+
+    &__phone {
+      display: block;
+      position: absolute;
+      right: 349px;
+      bottom: -100px;
+      width: 346px;
+      height: 600px;
+      z-index: 3;
+      background: url("../img/mobile_min.png") no-repeat;
+      transition: transform .1s linear;
+    }
+
+    &__wrap {
+      width: 100%;
+      padding-right: 50%;
+    }
+  }
+}
+/*---------- /hero ---------*/
+

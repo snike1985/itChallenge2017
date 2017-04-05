@@ -1,6 +1,30 @@
 .site {
-  @include justify;
+  overflow: hidden;
+  font-weight: 400;
+  @include main-font1();
 
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include absoluteCenterX();
+    top: 20px;
+    width: calc(100vw - 40px);
+    height: 60px;
+    max-width: 1240px;
+    z-index: 2;
+    padding: 15px 20px;
+    background: #fff;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__footer {
+
+  }
 }
 @media (min-width: $phone-landscape) {
   .site {
@@ -19,7 +43,13 @@
 }
 @media (min-width: $desktop) {
   .site {
-
+    
+    &__header {
+      top: 29px;
+      height: 80px;
+      width: calc(100vw - 44px);
+      padding: 20px 36px;
+    }
   }
 }
 

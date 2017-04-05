@@ -1,0 +1,68 @@
+/*---------- icons ----------*/
+.icons {
+  padding: 13px 4px;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 68px;
+    height: 68px;
+    margin-right: 16px;
+    border-radius: 50%;
+    background: #0098cd;
+    transition: background .15s ease-in-out;
+
+    &:hover {
+      background: #222222;
+
+      .tail {
+        animation: tail .3s linear infinite;
+        transform-origin: bottom;
+      }
+
+      .head {
+        animation: head .3s linear infinite;
+        transform-origin: bottom;
+      }
+
+      .windows {
+        animation: windows .3s linear infinite;
+        transform-origin: center;
+      }
+    }
+
+    svg {
+      @include absoluteCenter();
+      width: 50%;
+      height: auto;
+      fill: #fff;
+    }
+  }
+}
+
+@media (min-width: $phone-landscape) {
+  .icons {
+
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .icons {
+    
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .icons {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .icons {
+    
+  }
+}
+/*---------- /icons ---------*/
+

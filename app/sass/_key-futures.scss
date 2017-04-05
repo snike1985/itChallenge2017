@@ -1,0 +1,168 @@
+/*---------- key-futures ----------*/
+.key-futures {
+  padding: 20px 50px;
+  text-align: center;
+  font-size: 18px;
+
+  &__title,
+  h2 {
+    display: block;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 64px;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #1ab798;
+    @include main-font2();
+
+    &:before {
+      @include absoluteCenterX();
+      bottom: 0;
+      width: 160px;
+      height: 2px;
+      background: #343c3f;
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      left: 50%;
+      bottom: -3px;
+      width: 6px;
+      height: 4px;
+      margin-left: -3px;
+      border-color: #343c3f;
+      border-style: solid;
+      border-width: 2px 0;
+      background: #fff;
+      transform: rotate(0deg) matrix(1, -1, 0, 1, 0, 0);
+      content: '';
+    }
+  }
+
+  p {
+    line-height: 36px;
+  }
+
+  &__wrap {
+    margin: 0 -30px;
+  }
+
+  &__column {
+
+  }
+
+  &__item {
+    color: #282528;
+    text-align: left;
+
+    &-icon {
+      display: block;
+      width: 36px;
+      height: 36px;
+
+      svg {
+        width: 100%;
+        fill: #1ab798;
+      }
+    }
+
+    &-title,
+    h3 {
+      margin-bottom: 13px;
+      font-size: 18px;
+      color: #282528;
+      @include main-font2();
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (min-width: $phone-landscape) {
+  .key-futures {
+
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .key-futures {
+
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .key-futures {
+
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      padding: 70px 0 142px;
+
+      &:before {
+        @include absoluteCenterX();
+        top: 0;
+        width: 30%;
+        height: 100%;
+        background: url("../img/mobile.png") no-repeat center;
+        background-size: contain;
+        pointer-events: none;
+        content: '';
+      }
+    }
+
+    &__column {
+      width: 30%;
+    }
+
+    &__item {
+      position: relative;
+      min-height: 50px;
+      padding: 3px 0 50px 50px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .key-futures {
+    padding: 118px calc(50% - 485px) 51px;
+
+    &__column {
+      width: 370px;
+    }
+
+    &__wrap {
+      margin: 77px -100px 0;
+
+      &:before {
+        width: 426px;
+      }
+    }
+
+    &__item {
+      padding: 3px 0 97px 92px;
+
+      &-icon {
+        left: 10px;
+      }
+    }
+  }
+}
+/*---------- /key-futures ---------*/
+

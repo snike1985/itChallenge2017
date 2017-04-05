@@ -1,0 +1,51 @@
+/*---------- social ----------*/
+.social {
+  padding: 5px;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    background: rgba(0, 0, 0, 0.302);
+    transition: background .15s ease-in-out;
+
+    &:hover {
+      background: #222222;
+    }
+
+    svg {
+      @include absoluteCenter();
+      width: 50%;
+      height: auto;
+      fill: #fff;
+    }
+  }
+}
+
+@media (min-width: $phone-landscape) {
+  .social {
+
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .social {
+    
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .social {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .social {
+    
+  }
+}
+/*---------- /social ---------*/
+

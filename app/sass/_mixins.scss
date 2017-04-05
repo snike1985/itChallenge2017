@@ -1,6 +1,11 @@
 //fonts
 @mixin main-font1() {
-  font-family: "myriadpro-regular", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+}
+
+@mixin main-font2() {
+  font-family: 'Raleway-Bold', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -15,6 +20,7 @@
   }
 }
 
+//centering
 @mixin absoluteCenter() {
   position: absolute;
   top: 50%;
@@ -30,4 +36,18 @@
   position: absolute;
   top: 50%;
   transform: translateY( -50% );
+}
+
+//transition
+@mixin transition( $property, $duration, $delay ) {
+  -webkit-transition: $property $duration+s linear $delay+s;
+  transition: $property $duration+s linear $delay+s;
+}
+@mixin transition-opacity-visibility( $duration, $function ) {
+  -webkit-transition: opacity $duration+s $function, visibility $duration+s $function;
+  transition: opacity $duration+s $function, visibility $duration+s $function;
+}
+@mixin transition-opacity-transform( $duration, $function ) {
+  -webkit-transition: opacity $duration+s $function, transform $duration+s $function;
+  transition: opacity $duration+s $function, transform $duration+s $function;
 }

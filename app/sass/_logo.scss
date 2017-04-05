@@ -1,0 +1,36 @@
+/*---------- logo ----------*/
+.logo {
+  @include main-font2();
+  font-size: 20px;
+  color: #1ab798;
+
+  img {
+    display: block;
+  }
+}
+
+@media (min-width: $phone-landscape) {
+  .logo {
+
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .logo {
+
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .logo {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .logo {
+    font-size: 30px;
+  }
+}
+/*---------- /logo ---------*/
+
