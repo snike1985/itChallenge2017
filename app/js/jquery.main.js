@@ -77,7 +77,6 @@
 
         //private properties
         var _obj = obj,
-            _header = _obj.find( '.site__header' ),
             _window = $( window );
 
         //private methods
@@ -95,12 +94,13 @@
             },
             _changeHeaderType = function() {
                 var winScroll = $( window ).scrollTop(),
-                    winHeight = $( window ).height();
+                    header = $( '.site__header' ),
+                    winHeight = $( '.hero' ).outerHeight();
 
-                if ( winScroll >= ( winHeight - _header.outerHeight() ) ) {
-                    _header.addClass( 'fixed' );
+                if ( winScroll >= ( winHeight - header.outerHeight() ) ) {
+                    header.addClass( 'fixed' );
                 } else {
-                    _header.removeClass( 'fixed' );
+                    header.removeClass( 'fixed' );
                 }
             },
             _init = function() {
