@@ -9,7 +9,7 @@
     display: block;
     position: relative;
     padding-bottom: 15px;
-    margin-bottom: 64px;
+    margin-bottom: 42px;
     font-size: 28px;
     text-transform: uppercase;
     color: #1ab798;
@@ -44,12 +44,78 @@
     line-height: 36px;
   }
 
-  &__wrap {
-    margin: 0 -30px;
+  &__slider {
+    min-height: 300px;
+
+    .swiper-pagination {
+      position: relative;
+      bottom: 0;
+
+      &-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+        background: #282528;
+
+        &-active {
+          background: #1ab798;
+        }
+      }
+    }
   }
 
-  &__slider {
-    height: 300px;
+  &__head {
+    margin-bottom: 102px;
+    text-align: center;
+  }
+
+  &__ava {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 24px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(196, 199, 199);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+    color: #062033;
+    font-weight: 600;
+  }
+
+  &__profession {
+    display: block;
+    font-size: 13px;
+    color: #646464;
+  }
+
+  &__text {
+    display: block;
+    position: relative;
+    padding: 0 0 41px 50px;
+    font-size: 18px;
+    line-height: 36px;
+    color: #282528;
+
+    &:before {
+      position: absolute;
+      top: -39px;
+      left: 0;
+      @include main-font3();
+      font-size: 150px;
+      line-height: normal;
+      color: #efefef;
+      content: '“';
+    }
   }
 }
 
@@ -73,11 +139,7 @@
 
 @media (min-width: $desktop) {
   .reviews {
-    padding: 118px calc(50% - 485px) 51px;
-
-    &__wrap {
-      margin: 0 -100px;
-    }
+    padding: 118px calc(50% - 500px);
   }
 }
 /*---------- /reviews ---------*/

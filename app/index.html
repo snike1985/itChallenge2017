@@ -36,23 +36,23 @@
                 <div class="menu__wrap">
 
                     <!-- menu__item -->
-                    <a href="#" class="menu__item active">Home</a>
+                    <a href="#hero" class="menu__item active">Home</a>
                     <!-- /menu__item -->
 
                     <!-- menu__item -->
-                    <a href="#" class="menu__item">FEATURES</a>
+                    <a href="#key-futures" class="menu__item">FEATURES</a>
                     <!-- /menu__item -->
 
                     <!-- menu__item -->
-                    <a href="#" class="menu__item">team</a>
+                    <a href="#team" class="menu__item">team</a>
                     <!-- /menu__item -->
 
                     <!-- menu__item -->
-                    <a href="#" class="menu__item">Testimonials</a>
+                    <a href="#reviews" class="menu__item">Testimonials</a>
                     <!-- /menu__item -->
 
                     <!-- menu__item -->
-                    <a href="#" class="menu__item">CONTACT</a>
+                    <a href="#contact-us" class="menu__item">CONTACT</a>
                     <!-- /menu__item -->
 
                 </div>
@@ -68,17 +68,17 @@
         <div class="site__content">
 
             <!-- hero -->
-            <div class="hero">
+            <div id="hero" class="hero">
 
                 <!-- hero__bg -->
                 <span class="hero__bg"></span>
                 <!-- /hero__bg -->
 
                 <!-- hero__wrap -->
-                <div class="hero__wrap">
+                <div class="hero__wrap show">
 
                     <!-- hero__title -->
-                    <h2 class="hero__title">
+                    <h2 class="hero__title show">
                         Introducing Mobileapp.
                         <span>Maecenas vitae tellus sapien. Praesent</span>
                     </h2>
@@ -123,32 +123,36 @@
                 <!-- /hero__wrap -->
                 
                 <!-- hero__phone -->
-                <div class="hero__phone">
-                    
-                </div>
+                <span class="hero__phone"></span>
                 <!-- /hero__phone -->
 
             </div>
             <!-- /hero -->
             
             <!-- key-futures -->
-            <div class="key-futures">
+            <div id="key-futures" class="key-futures">
 
-                <!-- key-futures__title -->
-                <h2 class="key-futures__title">KEY FEATURES</h2>
-                <!-- /key-futures__title -->
+                <!-- show -->
+                <div class="show">
 
-                <p>Nunc vulputate nibh sed congue facilisis. Curabitur posuere scelerisque neque. In sit amet lectus non
-                    lacus sollicitudin cursus a vitae felis. Praesent luctus mi quis nisi interdum eleifend.</p>
+                    <!-- key-futures__title -->
+                    <h2 class="key-futures__title show">KEY FEATURES</h2>
+                    <!-- /key-futures__title -->
+
+                    <p class="show">Nunc vulputate nibh sed congue facilisis. Curabitur posuere scelerisque neque. In sit amet lectus non
+                        lacus sollicitudin cursus a vitae felis. Praesent luctus mi quis nisi interdum eleifend.</p>
+
+                </div>
+                <!-- /show -->
 
                 <!-- key-futures__wrap -->
-                <div class="key-futures__wrap">
+                <div class="key-futures__wrap show">
 
                     <!-- key-futures__column -->
                     <div class="key-futures__column">
 
                         <!-- key-futures__item -->
-                        <div class="key-futures__item">
+                        <div class="key-futures__item show">
 
                             <!-- key-futures__item-icon -->
                             <span class="key-futures__item-icon">
@@ -187,7 +191,7 @@
                         <!-- /key-futures__item -->
 
                         <!-- key-futures__item -->
-                        <div class="key-futures__item">
+                        <div class="key-futures__item show">
 
                             <!-- key-futures__item-icon -->
                             <span class="key-futures__item-icon">
@@ -217,7 +221,7 @@
                         <!-- /key-futures__item -->
 
                         <!-- key-futures__item -->
-                        <div class="key-futures__item">
+                        <div class="key-futures__item show">
 
                             <!-- key-futures__item-icon -->
                             <span class="key-futures__item-icon">
@@ -261,7 +265,7 @@
                     <div class="key-futures__column">
 
                         <!-- key-futures__item -->
-                        <div class="key-futures__item">
+                        <div class="key-futures__item show">
 
                             <!-- key-futures__item-icon -->
                             <span class="key-futures__item-icon">
@@ -300,7 +304,7 @@
                         <!-- /key-futures__item -->
 
                         <!-- key-futures__item -->
-                        <div class="key-futures__item">
+                        <div class="key-futures__item show">
 
                             <!-- key-futures__item-icon -->
                             <span class="key-futures__item-icon">
@@ -353,7 +357,7 @@
                         <!-- /key-futures__item -->
 
                         <!-- key-futures__item -->
-                        <div class="key-futures__item">
+                        <div class="key-futures__item show">
 
                             <!-- key-futures__item-icon -->
                             <span class="key-futures__item-icon">
@@ -395,16 +399,16 @@
             <!-- /key-futures -->
             
             <!-- watch -->
-            <div class="watch">
+            <div id="watch" class="watch">
 
                 <!-- watch__content -->
-                <div class="watch__content">
+                <div class="watch__content show">
 
                     <!-- watch__title -->
-                    <h2 class="watch__title">watch the video</h2>
+                    <h2 class="watch__title show">watch the video</h2>
                     <!-- /watch__title -->
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla fringilla nisl congue
+                    <p class="show">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla fringilla nisl congue
                         congue. Maecenas nec condimentum libero, at elementum mauris. Phasellus eget nisi dapibus, ultricies
                         nisl at, hendrerit risusuis ornare luctus id sollicitudin ante lobortis at.</p>
 
@@ -479,7 +483,7 @@
                 <!-- /watch__content -->
 
                 <!-- watch__video -->
-                <div class="watch__video">
+                <div class="watch__video show">
 
                     <iframe src="https://player.vimeo.com/video/98417189" width="500" height="307" frameborder="0"
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -491,20 +495,26 @@
             <!-- /watch -->
 
             <!-- team -->
-            <div class="team">
+            <div id="team" class="team">
 
-                <!-- team__title -->
-                <h2 class="team__title">Our team</h2>
-                <!-- /team__title -->
+                <!-- show -->
+                <div class="show">
 
-                <p>Nunc vulputate nibh sed congue facilisis. Curabitur posuere scelerisque neque. In sit amet lectus non
-                    lacus sollicitudin cursus a vitae felis. Praesent luctus mi quis nisi interdum eleifend.</p>
+                    <!-- team__title -->
+                    <h2 class="team__title show">Our team</h2>
+                    <!-- /team__title -->
+
+                    <p class="show">Nunc vulputate nibh sed congue facilisis. Curabitur posuere scelerisque neque. In sit amet lectus non
+                        lacus sollicitudin cursus a vitae felis. Praesent luctus mi quis nisi interdum eleifend.</p>
+
+                </div>
+                <!-- /show -->
 
                 <!-- team__wrap -->
                 <div class="team__wrap">
 
                     <!-- team__item -->
-                    <div class="team__item">
+                    <div class="team__item show">
 
                         <!-- team__item-pic -->
                         <div class="team__item-pic" style="background-image: url(pic/team1.jpg)">
@@ -585,7 +595,7 @@
                     <!-- /team__item -->
 
                     <!-- team__item -->
-                    <div class="team__item">
+                    <div class="team__item show">
 
                         <!-- team__item-pic -->
                         <div class="team__item-pic" style="background-image: url(pic/team2.jpg)">
@@ -666,7 +676,7 @@
                     <!-- /team__item -->
 
                     <!-- team__item -->
-                    <div class="team__item">
+                    <div class="team__item show">
 
                         <!-- team__item-pic -->
                         <div class="team__item-pic" style="background-image: url(pic/team3.jpg)">
@@ -747,7 +757,7 @@
                     <!-- /team__item -->
 
                     <!-- team__item -->
-                    <div class="team__item">
+                    <div class="team__item show">
 
                         <!-- team__item-pic -->
                         <div class="team__item-pic" style="background-image: url(pic/team4.jpg)">
@@ -834,17 +844,14 @@
             <!-- /team -->
 
             <!-- reviews -->
-            <div class="reviews">
+            <div id="reviews" class="reviews">
 
                 <!-- reviews__title -->
                 <h2 class="reviews__title show">What our customer’s say</h2>
                 <!-- /reviews__title -->
 
-                <p>Nunc vulputate nibh sed congue facilisis. Curabitur posuere scelerisque neque. In sit amet lectus non
-                    lacus sollicitudin cursus a vitae felis. Praesent luctus mi quis nisi interdum eleifend.</p>
-
                 <!-- reviews__slider -->
-                <div class="reviews__slider">
+                <div class="reviews__slider show">
                     
                     <!-- swiper-container -->
                     <div class="swiper-container">
@@ -853,19 +860,131 @@
                         <div class="swiper-wrapper">
 
                             <!-- swiper-slide -->
-                            <div class="swiper-slide" style="background-color: red">red</div>
+                            <div class="swiper-slide">
+
+                                <!-- reviews__head -->
+                                <div class="reviews__head">
+                                    <!-- reviews__ava -->
+                                    <span class="reviews__ava" style="background-image: url(pic/ava1.jpg)"></span>
+                                    <!-- /reviews__ava -->
+
+                                    <!-- reviews__name -->
+                                    <strong class="reviews__name">Jon Doe</strong>
+                                    <!-- /reviews__name -->
+
+                                    <!-- reviews__profession -->
+                                    <span class="reviews__profession">Company Inc.</span>
+                                    <!-- /reviews__profession -->
+                                </div>
+                                <!-- /reviews__head -->
+
+                                <!-- reviews__text -->
+                                <div class="reviews__text">
+                                    Vestibulum placerat nisl quis justo venenatis, et lacinia nunc venenatis. semper
+                                    libero nec sapien condimentum dignissim. Nunc ante ligula, tempor in tellus in,
+                                    gravida vestibulum justo. Nulla facilisi. Nullam tristique eros quis nibh tempus,
+                                    vel viverra dolor pretium. Nam et vehicula leo. Vivamus hendrerit sit amet ante a
+                                    tempus. Aenean gravida massa et ante pulvinar, id
+                                </div>
+                                <!-- /reviews__text -->
+
+                            </div>
                             <!-- /swiper-slide -->
 
                             <!-- swiper-slide -->
-                            <div class="swiper-slide" style="background-color: blue">blue</div>
+                            <div class="swiper-slide">
+
+                                <!-- reviews__head -->
+                                <div class="reviews__head">
+                                    <!-- reviews__ava -->
+                                    <span class="reviews__ava" style="background-image: url(pic/ava1.jpg)"></span>
+                                    <!-- /reviews__ava -->
+
+                                    <!-- reviews__name -->
+                                    <strong class="reviews__name">Jon Doe</strong>
+                                    <!-- /reviews__name -->
+
+                                    <!-- reviews__profession -->
+                                    <span class="reviews__profession">Company Inc.</span>
+                                    <!-- /reviews__profession -->
+                                </div>
+                                <!-- /reviews__head -->
+
+                                <!-- reviews__text -->
+                                <div class="reviews__text">
+                                    Vestibulum placerat nisl quis justo venenatis, et lacinia nunc venenatis. semper
+                                    libero nec sapien condimentum dignissim. Nunc ante ligula, tempor in tellus in,
+                                    gravida vestibulum justo. Nulla facilisi. Nullam tristique eros quis nibh tempus,
+                                    vel viverra dolor pretium. Nam et vehicula leo. Vivamus hendrerit sit amet ante a
+                                    tempus. Aenean gravida massa et ante pulvinar, id
+                                </div>
+                                <!-- /reviews__text -->
+
+                            </div>
                             <!-- /swiper-slide -->
 
                             <!-- swiper-slide -->
-                            <div class="swiper-slide" style="background-color: green">green</div>
+                            <div class="swiper-slide">
+
+                                <!-- reviews__head -->
+                                <div class="reviews__head">
+                                    <!-- reviews__ava -->
+                                    <span class="reviews__ava" style="background-image: url(pic/ava1.jpg)"></span>
+                                    <!-- /reviews__ava -->
+
+                                    <!-- reviews__name -->
+                                    <strong class="reviews__name">Jon Doe</strong>
+                                    <!-- /reviews__name -->
+
+                                    <!-- reviews__profession -->
+                                    <span class="reviews__profession">Company Inc.</span>
+                                    <!-- /reviews__profession -->
+                                </div>
+                                <!-- /reviews__head -->
+
+                                <!-- reviews__text -->
+                                <div class="reviews__text">
+                                    Vestibulum placerat nisl quis justo venenatis, et lacinia nunc venenatis. semper
+                                    libero nec sapien condimentum dignissim. Nunc ante ligula, tempor in tellus in,
+                                    gravida vestibulum justo. Nulla facilisi. Nullam tristique eros quis nibh tempus,
+                                    vel viverra dolor pretium. Nam et vehicula leo. Vivamus hendrerit sit amet ante a
+                                    tempus. Aenean gravida massa et ante pulvinar, id
+                                </div>
+                                <!-- /reviews__text -->
+
+                            </div>
                             <!-- /swiper-slide -->
 
                             <!-- swiper-slide -->
-                            <div class="swiper-slide" style="background-color: yellow">yellow</div>
+                            <div class="swiper-slide">
+
+                                <!-- reviews__head -->
+                                <div class="reviews__head">
+                                    <!-- reviews__ava -->
+                                    <span class="reviews__ava" style="background-image: url(pic/ava1.jpg)"></span>
+                                    <!-- /reviews__ava -->
+
+                                    <!-- reviews__name -->
+                                    <strong class="reviews__name">Jon Doe</strong>
+                                    <!-- /reviews__name -->
+
+                                    <!-- reviews__profession -->
+                                    <span class="reviews__profession">Company Inc.</span>
+                                    <!-- /reviews__profession -->
+                                </div>
+                                <!-- /reviews__head -->
+
+                                <!-- reviews__text -->
+                                <div class="reviews__text">
+                                    Vestibulum placerat nisl quis justo venenatis, et lacinia nunc venenatis. semper
+                                    libero nec sapien condimentum dignissim. Nunc ante ligula, tempor in tellus in,
+                                    gravida vestibulum justo. Nulla facilisi. Nullam tristique eros quis nibh tempus,
+                                    vel viverra dolor pretium. Nam et vehicula leo. Vivamus hendrerit sit amet ante a
+                                    tempus. Aenean gravida massa et ante pulvinar, id
+                                </div>
+                                <!-- /reviews__text -->
+
+                            </div>
                             <!-- /swiper-slide -->
 
                         </div>
@@ -883,13 +1002,114 @@
                 
             </div>
             <!-- /reviews -->
+            
+            <!-- contact-us -->
+            <div id="contact-us" class="contact-us">
+
+                <!-- contact-us__bg -->
+                <span class="contact-us__bg"></span>
+                <!-- /contact-us__bg -->
+
+                <!-- contact-us__title -->
+                <h2 class="contact-us__title show">Contact us</h2>
+                <!-- /contact-us__title -->
+
+                <!-- contact-us__wrap -->
+                <div class="contact-us__wrap">
+
+                    <!-- contact-us__info -->
+                    <div class="contact-us__info show">
+                        <strong>Get in touch with us</strong>
+
+                        <p>Nunc urna est, tristique et varius at, pharetra nec enim. Quisque rhoncus lacus fringilla
+                            nulla sollicitudin tristique. standard dummy text ever since the 1500s,</p>
+
+                        <!-- social -->
+                        <div class="social social_color">
+
+                            <!-- social__item -->
+                            <a href="#" class="social__item social__item_facebook" title="facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 470.513 470.513" style="enable-background:new 0 0 470.513 470.513;"
+                                                 xml:space="preserve">
+                                            <path d="M271.521,154.17v-40.541c0-6.086,0.28-10.8,0.849-14.13c0.567-3.335,1.857-6.615,3.859-9.853
+                                                    c1.999-3.236,5.236-5.47,9.706-6.708c4.476-1.24,10.424-1.858,17.85-1.858h40.539V0h-64.809c-37.5,0-64.433,8.897-80.803,26.691
+                                                    c-16.368,17.798-24.551,44.014-24.551,78.658v48.82h-48.542v81.086h48.539v235.256h97.362V235.256h64.805l8.566-81.086H271.521z"/>
+                                        </svg>
+                            </a>
+                            <!-- /social__item -->
+
+                            <!-- social__item -->
+                            <a href="#" class="social__item social__item_twitter" title="twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+                                            <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+                                                        c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+                                                        c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+                                                        c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+                                                        c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+                                                        c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+                                                        c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"/>
+                                        </svg>
+                            </a>
+                            <!-- /social__item -->
+
+                            <!-- social__item -->
+                            <a href="#" class="social__item social__item_google" title="g+">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 604.35 604.35" style="enable-background:new 0 0 604.35 604.35;"
+                                                 xml:space="preserve">
+                                            <path d="M516.375,255v-76.5h-51V255h-76.5v51h76.5v76.5h51V306h76.5v-51H516.375z M320.025,341.7l-28.051-20.4
+                                                        c-10.2-7.649-20.399-17.85-20.399-35.7s12.75-33.15,25.5-40.8c33.15-25.5,66.3-53.55,66.3-109.65c0-53.55-33.15-84.15-51-99.45
+                                                        h43.35l30.6-35.7h-158.1c-112.2,0-168.3,71.4-168.3,147.9c0,58.65,45.9,122.4,127.5,122.4h20.4c-2.55,7.65-10.2,20.4-10.2,33.15
+                                                        c0,25.5,10.2,35.7,22.95,51c-35.7,2.55-102,10.2-150.45,40.8c-45.9,28.05-58.65,66.3-58.65,94.35
+                                                        c0,58.65,53.55,114.75,168.3,114.75c137.7,0,204.001-76.5,204.001-150.449C383.775,400.35,355.725,372.3,320.025,341.7z
+                                                         M126.225,109.65c0-56.1,33.15-81.6,68.85-81.6c66.3,0,102,89.25,102,140.25c0,66.3-53.55,79.05-73.95,79.05
+                                                        C159.375,247.35,126.225,168.3,126.225,109.65z M218.024,568.65c-84.15,0-137.7-38.25-137.7-94.351c0-56.1,51-73.95,66.3-81.6
+                                                        c33.15-10.2,76.5-12.75,84.15-12.75s12.75,0,17.85,0c61.2,43.35,86.7,61.2,86.7,102C335.324,530.4,286.875,568.65,218.024,568.65z
+                                                        "/>
+                                            </svg>
+                            </a>
+                            <!-- /social__item -->
+
+                        </div>
+                        <!-- /social -->
+
+                        <address>
+                            <a href="tel:+XXXXXXXXXXXX">+XX-XXXX - XXXX - XX</a>
+                            <a href="mailTo:Businessname@gmail.com">Businessname@gmail.com</a>
+                        </address>
+                    </div>
+                    <!-- /contact-us__info -->
+
+                    <!-- contact-us__form -->
+                    <form action="#" class="contact-us__form show">
+
+                        <!-- contact-us__form-double -->
+                        <div class="contact-us__form-double">
+                            <input type="name" placeholder="Name" required>
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <!-- /contact-us__form-double -->
+
+                        <textarea placeholder="Message"></textarea>
+
+                        <button class="btn" type="submit"><span>SUBMIT</span></button>
+                    </form>
+                    <!-- /contact-us__form -->
+                </div>
+                <!-- /contact-us__wrap -->
+
+            </div>
+            <!-- /contact-us -->
 
         </div>
         <!-- /site__content -->
         
         <!-- site__footer -->
         <footer class="site__footer">
-            
+            <span>© 2003-2015 Business Name, All Rights Reserved</span>
+            <span>Designed by <a href="Colorpixels.net">Colorpixels.net</a></span>
         </footer>
         <!-- /site__footer -->
 

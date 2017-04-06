@@ -1,6 +1,7 @@
 /*---------- social ----------*/
 .social {
   padding: 5px;
+  cursor: default;
 
   &__item {
     display: inline-block;
@@ -9,7 +10,7 @@
     width: 42px;
     height: 42px;
     background: rgba(0, 0, 0, 0.302);
-    transition: background .15s ease-in-out;
+    transition: background .3s ease-in-out;
 
     &:hover {
       background: #222222;
@@ -20,6 +21,31 @@
       width: 50%;
       height: auto;
       fill: #fff;
+    }
+  }
+
+  &__item_facebook {
+    background: #3b5997;
+  }
+
+  &__item_twitter {
+    background: #3ec2f3;
+  }
+
+  &__item_google {
+    background: #e44c41;
+  }
+
+  &.social_color {
+    padding: 28px 0;
+
+    .social__item {
+      margin-right: 10px;
+      border-radius: 50%;
+
+      &:hover {
+        background: #1ab798;
+      }
     }
   }
 }

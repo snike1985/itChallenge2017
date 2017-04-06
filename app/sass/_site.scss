@@ -1,5 +1,6 @@
 .site {
   overflow: hidden;
+  position: relative;
   font-weight: 400;
   @include main-font1();
 
@@ -7,14 +8,32 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include absoluteCenterX();
+    position: fixed;
+    //@include absoluteCenterX();
     top: 20px;
-    width: calc(100vw - 40px);
+    left: 20px;
+    right: 20px;
     height: 60px;
-    max-width: 1240px;
     z-index: 2;
     padding: 15px 20px;
     background: #fff;
+    transition: all .3s linear;
+
+    &.fixed {
+      top: 0;
+      left: 0;
+      right: 0;
+      box-shadow: 0 0 10px rgba(0,0,0,.8);
+
+      .menu__btn {
+        right: 20px;
+      }
+    }
+
+    &.hide {
+      transform: translate( 0, -100% );
+      box-shadow: none;
+    }
   }
 
   &__content {
@@ -23,7 +42,58 @@
   }
 
   &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 77px;
+    padding: 10px 20px;
+    z-index: 2;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(255,255,255,.5);
 
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      opacity: .31;
+      background-color: rgba(255,255,255,.61);
+      content: '';
+    }
+
+    span {
+      display: block;
+    }
+
+    a,
+    a:visited {
+      display: inline-block;
+      position: relative;
+      color: rgba(255,255,255,.5);
+
+      &:before {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: rgba(255,255,255,.5);
+        content: '';
+        transition: all .3s ease-in-out;
+      }
+
+      &:hover {
+
+        &:before {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
   }
 }
 @media (min-width: $phone-landscape) {
@@ -46,9 +116,27 @@
     
     &__header {
       top: 29px;
+      left: 50vw;
       height: 80px;
       width: calc(100vw - 44px);
+      max-width: 1240px;
       padding: 20px 36px;
+      margin-left: -620px;
+
+      &.fixed {
+        width: auto;
+        max-width: 100%;
+        padding: 20px calc(50% - 620px + 36px);
+        margin-left: 0;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px calc(50% - 585px) 10px;
+      text-align: left;
     }
   }
 }

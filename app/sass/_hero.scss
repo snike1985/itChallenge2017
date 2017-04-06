@@ -46,6 +46,7 @@
   }
 
   ul {
+    margin-bottom: 20px;
 
     li {
       position: relative;
@@ -65,6 +66,10 @@
         content: '';
       }
     }
+  }
+
+  .btn {
+    margin: 0 10px;
   }
 }
 
@@ -104,18 +109,6 @@
       pointer-events: none;
     }
 
-    //&__phone {
-    //  display: block;
-    //  position: absolute;
-    //  right: 249px;
-    //  bottom: -100px;
-    //  width: 452px;
-    //  height: 663px;
-    //  z-index: 3;
-    //  background: url("../img/hero-phones.png") no-repeat;
-    //  transition: transform .1s linear;
-    //}
-
     &__phone {
       display: block;
       position: absolute;
@@ -131,6 +124,10 @@
     &__wrap {
       width: 100%;
       padding-right: 50%;
+    }
+
+    ul {
+      margin-bottom: 78px;
     }
   }
 }
