@@ -1,8 +1,7 @@
 /*---------- contact-us ----------*/
 .contact-us {
   position: relative;
-  height: 680px;
-  padding: 20px 50px;
+  padding: 20px 20px 97px;
   font-size: 18px;
   color: #fff;
 
@@ -69,7 +68,7 @@
       display: block;
       margin-bottom: 7px;
       font-size: 26px;
-      @include main-font2();
+      @include main-font4();
     }
 
     p {
@@ -173,7 +172,7 @@
 
 @media (min-width: $desktop) {
   .contact-us {
-    padding: 65px 0;
+    padding: 65px 0 142px;
 
     &__wrap {
       display: flex;
