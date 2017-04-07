@@ -1,14 +1,15 @@
+/*---------- btn ----------*/
 .btn {
   overflow: hidden;
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 160px;
-  height: 49px;
-  padding: 5px 22px;
+  min-width: 120px;
+  height: 40px;
+  padding: 5px 16px;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   border: none;
   color: #fff;
@@ -38,8 +39,8 @@
 
   &__icon {
     display: block;
-    width: 37px;
-    margin-right: 19px;
+    width: 27px;
+    margin-right: 10px;
 
     svg {
       width: 100%;
@@ -59,3 +60,37 @@
     }
   }
 }
+
+@media (min-width: $phone-landscape) {
+  .btn {
+
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .btn {
+
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .btn {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .btn {
+    min-width: 160px;
+    height: 49px;
+    padding: 5px 22px;
+    border-radius: 4px;
+    font-size: 20px;
+
+    &__icon {
+      width: 37px;
+      margin-right: 19px;
+    }
+  }
+}
+/*---------- /btn ---------*/

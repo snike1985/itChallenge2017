@@ -97,7 +97,7 @@
                     header = $( '.site__header' ),
                     winHeight = $( '.hero' ).outerHeight();
 
-                if ( winScroll >= ( winHeight - header.outerHeight() ) ) {
+                if ( winScroll >= winHeight ) {
                     header.addClass( 'fixed' );
                 } else {
                     header.removeClass( 'fixed' );
@@ -171,7 +171,8 @@
         var _self = this,
             _obj = obj,
             _slider = _obj.find( '.swiper-container' ),
-            _sw = null;
+            _sw = null,
+            _window = $( window );
 
         //private methods
         var _constructor = function () {
@@ -180,6 +181,12 @@
                 _obj[0].obj = _self;
             },
             _onEvents = function () {
+
+            _window.on( {
+                'resize': function () {
+                    _sw.update();
+                }
+            } );
 
             },
             _sliderInit = function () {

@@ -1,8 +1,7 @@
 /*---------- reviews ----------*/
 .reviews {
-  padding: 20px 50px;
+  padding: 50px 20px;
   text-align: center;
-  font-size: 18px;
 
   &__title,
   h2 {
@@ -40,12 +39,9 @@
     }
   }
 
-  p {
-    line-height: 36px;
-  }
 
   &__slider {
-    min-height: 300px;
+    min-height: 200px;
 
     .swiper-pagination {
       position: relative;
@@ -65,15 +61,15 @@
   }
 
   &__head {
-    margin-bottom: 102px;
+    margin-bottom: 30px;
     text-align: center;
   }
 
   &__ava {
     display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 24px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
     border-style: solid;
     border-width: 2px;
     border-color: rgb(196, 199, 199);
@@ -87,31 +83,31 @@
   &__name {
     display: block;
     margin-bottom: 4px;
-    font-size: 18px;
+    font-size: 16px;
     color: #062033;
     font-weight: 600;
   }
 
   &__profession {
     display: block;
-    font-size: 13px;
+    font-size: 12px;
     color: #646464;
   }
 
   &__text {
     display: block;
     position: relative;
-    padding: 0 0 41px 50px;
-    font-size: 18px;
-    line-height: 36px;
+    padding: 0 0 20px 20px;
+    font-size: 14px;
+    line-height: 20px;
     color: #282528;
 
     &:before {
       position: absolute;
-      top: -39px;
+      top: -15px;
       left: 0;
       @include main-font3();
-      font-size: 150px;
+      font-size: 60px;
       line-height: normal;
       color: #efefef;
       content: '“';
@@ -134,12 +130,39 @@
 @media (min-width: $tablet-landscape) {
   .reviews {
 
+    &__head { margin-bottom: 102px }
+
+    &__slider {
+      max-width: 1030px;
+      margin: 0 auto;
+    }
+
+    &__ava {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 24px;
+    }
+
+    &__name { font-size: 18px }
+
+    &__profession { font-size: 13px }
+
+    &__text {
+      padding: 0 0 41px 50px;
+      font-size: 18px;
+      line-height: 36px;
+
+      &:before {
+        top: -39px;
+        font-size: 150px;
+      }
+    }
   }
 }
 
 @media (min-width: $desktop) {
   .reviews {
-    padding: 118px calc(50% - 500px);
+    padding: 118px 0;
   }
 }
 /*---------- /reviews ---------*/
