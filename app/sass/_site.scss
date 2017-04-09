@@ -29,7 +29,7 @@
     }
 
     &.hide {
-      transform: translate( 0, -100% );
+      top: -60px;
       box-shadow: none;
     }
   }
@@ -132,12 +132,7 @@
       padding: 20px 36px;
       margin-left: -620px;
 
-      &.fixed {
-        //width: auto;
-        //max-width: 100%;
-        //padding: 20px calc(50% - 620px + 36px);
-        //margin-left: 0;
-      }
+      &.hide { top: -80px }
     }
 
     &__footer { padding: 28px calc(50% - 585px) 10px }

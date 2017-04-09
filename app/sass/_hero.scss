@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  height: 80vh;
   padding: 100px 20px 20px;
   font-size: 14px;
   color: #fff;
@@ -93,16 +94,17 @@
 
 @media (min-width: $desktop) {
   .hero {
+    align-items: flex-end;
     height: 758px;
     padding: 150px calc(50% - 585px);
     font-size: 16px;
 
     &:before {
       position: absolute;
-      right: 249px;
-      bottom: -100px;
-      width: 426px;
-      height: 726px;
+      left: calc(50% + 149px);
+      bottom: -127px;
+      width: 390px;
+      height: 665px;
       z-index: 2;
       background: url("../img/mobile.png") no-repeat;
       content: '';
@@ -112,8 +114,8 @@
     &__phone {
       display: block;
       position: absolute;
-      right: 349px;
-      bottom: -100px;
+      left: calc(50% + 87px);
+      bottom: -124px;
       width: 346px;
       height: 600px;
       z-index: 3;
@@ -129,6 +131,8 @@
     ul {
       margin-bottom: 78px;
     }
+
+    .btn { padding-right: 39px }
   }
 }
 /*---------- /hero ---------*/

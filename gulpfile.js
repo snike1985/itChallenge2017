@@ -11,6 +11,7 @@ var uglify          = require('gulp-uglify');
 var autoprefixer    = require('gulp-autoprefixer');
 var browserSync     = require('browser-sync').create();
 var del             = require('del');
+var htmlmin         = require('gulp-htmlmin');
 
 var paths = {
     views: 'app/**/*.html',
@@ -108,6 +109,12 @@ gulp.task( 'scripts', function () {
             .pipe(sourcemaps.write())
             .pipe(gulp.dest('dist/js/'));
     }
+});
+
+gulp.task('views', function() {
+    return gulp.src(paths.views)
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('images', function() {

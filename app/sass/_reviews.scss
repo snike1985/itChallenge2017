@@ -42,22 +42,6 @@
 
   &__slider {
     min-height: 200px;
-
-    .swiper-pagination {
-      position: relative;
-      bottom: 0;
-
-      &-bullet {
-        width: 10px;
-        height: 10px;
-        margin: 0 4px;
-        background: #282528;
-
-        &-active {
-          background: #1ab798;
-        }
-      }
-    }
   }
 
   &__head {
@@ -134,7 +118,8 @@
 
     &__slider {
       max-width: 1030px;
-      margin: 0 auto;
+      margin: 0 auto 12px;
+      padding-top: 4px;
     }
 
     &__ava {
@@ -162,7 +147,7 @@
 
 @media (min-width: $desktop) {
   .reviews {
-    padding: 118px 0;
+    padding: 90px 0;
   }
 }
 /*---------- /reviews ---------*/

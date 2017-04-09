@@ -55,7 +55,8 @@
     font-size: 13px;
     color: #062033;
 
-    &:hover {
+    &:hover,
+    &.active {
 
       .team__item-info {
         opacity: 1;
@@ -172,13 +173,50 @@
 
     &__item {
       width: calc(25% - 22.5px);
+
+      &.active {
+        .team__item-info {
+          opacity: 0;
+
+          strong,
+          p,
+          .social {
+            opacity: 0;
+            top: 10px;
+          }
+        }
+
+        .team__item-name {
+          color: #062033;
+        }
+
+        &:hover {
+          .team__item-info {
+            opacity: 1;
+
+            strong,
+            p,
+            .social {
+              opacity: 1;
+              top: 0;
+              transition-timing-function: ease-in-out;
+              transition-duration: .3s;
+              transition-property: all;
+            }
+          }
+
+          .team__item-name {
+            color: #1ab798;
+          }
+        }
+      }
     }
   }
 }
 
 @media (min-width: $desktop) {
   .team {
-    padding: 118px calc(50% - 485px) 51px;
+    padding: 90px calc(50% - 485px) 18px;
 
     &__wrap {
       margin: 0 -100px;

@@ -27,8 +27,15 @@
             new Hero( $(this) );
         } );
 
-    });
+        $('.team').each( function() {
+            new Team( $(this) );
+        } );
 
+        $('.watch').each( function() {
+            new Watch( $(this) );
+        } );
+
+    });
 
     var ContactUs = function(obj) {
 
@@ -77,6 +84,7 @@
 
         //private properties
         var _obj = obj,
+            _header = _obj.find( '.site__header' ),
             _window = $( window );
 
         //private methods
@@ -85,23 +93,51 @@
                 _window.on({
                     'load': function() {
                         _changeHeaderType();
+                        _checkActiveMenu();
                     },
                     'scroll': function() {
                         _changeHeaderType();
+                        _checkActiveMenu();
                     }
                 });
 
             },
             _changeHeaderType = function() {
                 var winScroll = $( window ).scrollTop(),
-                    header = $( '.site__header' ),
                     winHeight = $( '.hero' ).outerHeight();
 
                 if ( winScroll >= winHeight ) {
-                    header.addClass( 'fixed' );
+                    _header.addClass( 'fixed' );
                 } else {
-                    header.removeClass( 'fixed' );
+                    _header.removeClass( 'fixed' );
                 }
+            },
+            _checkActiveMenu = function() {
+                var menuItems = $( '.menu__item' ),
+                    winScrollTop = _window.scrollTop() + _window.outerHeight()*0.5,
+                    _siteBloks = $( '.site__content' ).children(),
+                    activeID;
+
+                _siteBloks.each( function () {
+                    var curElem = $(this),
+                        curElemTop = curElem.offset().top;
+                    
+                    if ( winScrollTop > curElemTop ) {
+                        activeID = '#' + curElem.attr( 'id' );
+                    }
+                } );
+                
+                menuItems.removeClass( 'active' );
+
+                menuItems.each( function() {
+                    var elem = $(this),
+                        elemHref = elem.attr( 'href' );
+
+                    if ( elemHref == activeID ) {
+                        elem.addClass( 'active' );
+                    }
+                } );
+                
             },
             _init = function() {
                 _addEvents();
@@ -119,7 +155,8 @@
         //private properties
         var _obj = obj,
             _btn = _obj.find( '.menu__btn' ),
-            _item = _obj.find( '.menu__item' );
+            _item = _obj.find( '.menu__item' ),
+            _scrollConteiner = $( 'html' );
 
         //private methods
         var _addEvents = function() {
@@ -129,8 +166,19 @@
 
                         if ( !_obj.hasClass( 'active' ) ) {
                             _obj.addClass( 'active' );
+                            _scrollConteiner.css( {
+                                overflowY: 'hidden',
+                                paddingRight: _getScrollWidth()
+                            } );
                         } else {
                             _obj.removeClass( 'active' );
+                            _obj.find('.menu__wrap').css( {
+                                overflowY: 'hidden'
+                            } );
+                            _scrollConteiner.css( {
+                                overflowY: 'auto',
+                                paddingRight: 0
+                            } );
                         }
                     }
                 });
@@ -140,11 +188,17 @@
                         event.preventDefault();
                         var elem = $( this ),
                             id = elem.attr( 'href' ),
-                            way = $( id ).offset().top,
-                            duration = 1000;
+                            way = $( id ).offset().top - $( '.site__header' ).outerHeight() + 2,
+                            duration = 1000,
+                            scrollWrap = $( 'body, html' );
 
                         if ( !elem.hasClass( 'active' ) ) {
-                            $( 'body, html' ).animate( { scrollTop: way }, duration );
+                            scrollWrap.animate( { scrollTop: way }, duration );
+
+                            setTimeout( function () {
+                                scrollWrap.animate( { scrollTop: way - 1 }, 1 );
+                            }, duration );
+
                             _item.removeClass( 'active' );
                             elem.addClass( 'active' );
                             _obj.removeClass( 'active' );
@@ -153,6 +207,20 @@
                     }
                 });
 
+            },
+            _getScrollWidth = function (){
+                var scrollDiv = document.createElement( 'div'),
+                    scrollBarWidth;
+
+                scrollDiv.className = 'scrollbar-measure';
+
+                document.body.appendChild( scrollDiv );
+
+                scrollBarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+
+                document.body.removeChild(scrollDiv);
+
+                return scrollBarWidth;
             },
             _init = function() {
                 _addEvents();
@@ -171,6 +239,7 @@
         var _self = this,
             _obj = obj,
             _slider = _obj.find( '.swiper-container' ),
+            _sliderPagination = _slider.find( '.swiper-pagination' ),
             _sw = null,
             _window = $( window );
 
@@ -191,7 +260,7 @@
             },
             _sliderInit = function () {
                 _sw = new Swiper( _slider, {
-                    pagination: '.swiper-pagination',
+                    pagination: _sliderPagination,
                     paginationClickable: true
                 });
             };
@@ -229,7 +298,7 @@
                     var curItem = $(this),
                         topPos = _obj.offset().top;
 
-                    if( ( _window.scrollTop() + windowH*0.8 ) > topPos && !curItem.hasClass( 'animation' ) ){
+                    if( ( _window.scrollTop() + windowH*0.9 ) > topPos && !curItem.hasClass( 'animation' ) ){
 
                         curItem.addClass( 'animation' );
                     }
@@ -262,17 +331,6 @@
         var _addEvents = function() {
 
                 _window.on({
-                    'scroll': function() {
-                        var
-                            collectionTop = $(this).scrollTop(),
-                            collectionHeight = _obj.height(),
-                            winHeight = $(window).height();
-                        
-                        // _paralax( _phone, 0, collectionTop, collectionHeight*0.2/(collectionHeight + winHeight));
-                    }
-                });
-
-                _window.on({
                     'mousemove': function(e) {
                         var pageX = e.pageX,
                             pageY = e.pageY,
@@ -300,26 +358,23 @@
                                 _winTop = 0;
                             }
 
-                            // _winTop = _window.scrollTop() > 0 ? _window.scrollTop() : _window.scrollTop() >= maxScrollTop ? maxScrollTop : 0;
-
                             switch ( direct ) {
                                 case 'top':
-                                    $( '.site__header' ).removeClass( 'hide' );
+                                    _siteHeader.removeClass( 'hide' );
                                     break;
                                 case 'bottom':
-                                    $( '.site__header' ).addClass( 'hide' );
+                                    _siteHeader.addClass( 'hide' );
                                     break;
                                 default:
                                     break;
                             }
                         }
-
                     }
                 });
             },
             _move = function( xPercent, yPercent ){
-            var phoneStep = 3,
-                backgroundStep = 10;
+                var phoneStep = 3,
+                    backgroundStep = 10;
 
                 _phone.css( {
                     '-webkit-transform': 'translate( ' + ( xPercent * phoneStep ) + 'px, ' + -( yPercent * phoneStep ) + 'px )',
@@ -346,5 +401,71 @@
         //public methods
 
         _init();
+    };
+
+    var Team = function(obj) {
+
+        //private properties
+        var _obj = obj,
+            _items = _obj.find( '.team__item' );
+
+        //private methods
+        var _addEvents = function() {
+
+                _items.on( {
+                    'click': function () {
+                        var curElem = $(this);
+
+                        if ( !curElem.hasClass( 'active' ) ) {
+                            _items.removeClass( 'active' );
+                            curElem.addClass( 'active' );
+                        }
+                    }
+                } );
+            },
+            _init = function() {
+                _addEvents();
+            };
+
+        //public properties
+
+        //public methods
+
+        _init();
+    };
+
+    var Watch = function (obj) {
+
+        //private properties
+        var _self = this,
+            _obj = obj,
+            _videoWrap = _obj.find( '.watch__video' ),
+            _videoSrc = _videoWrap.attr( 'data-videoSrc' ),
+            _window = $( window );
+
+        //private methods
+        var _constructor = function () {
+                _onEvents();
+                _obj[0].obj = _self;
+            },
+            _createVideo = function () {
+                var videoIframe = '<iframe src="' + _videoSrc + '" webkitallowfullscreen mozallowfullscreen ' +
+                        'allowfullscreen></iframe>';
+
+                _videoWrap.append( videoIframe );
+            },
+            _onEvents = function () {
+                _window.on({
+                    'load': function () {
+                        _createVideo();
+                    }
+                });
+            };
+
+        //public properties
+
+        //public methods
+
+        _constructor();
     };
 } )();
