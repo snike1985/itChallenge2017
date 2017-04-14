@@ -1,3 +1,4 @@
+/*---------- show ----------*/
 .show {
   opacity: 0;
   transform: translateY( 30px );
@@ -8,6 +9,7 @@
     transform: translateY(0);
   }
 }
+/*---------- /show ---------*/
 
 @keyframes btn-arrow {
   0% {

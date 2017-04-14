@@ -3,6 +3,7 @@
   padding: 50px 20px;
   text-align: center;
   font-size: 16px;
+  color: $key-futures-color;
 
   &__title,
   h2 {
@@ -12,7 +13,7 @@
     margin-bottom: 64px;
     font-size: 28px;
     text-transform: uppercase;
-    color: #1ab798;
+    color: $key-futures-title-color;
     @include main-font2();
 
     &:before {
@@ -20,7 +21,7 @@
       bottom: 0;
       width: 160px;
       height: 2px;
-      background: #343c3f;
+      background: $key-futures-title-line-color;
       content: '';
     }
 
@@ -34,27 +35,16 @@
       border-color: #343c3f;
       border-style: solid;
       border-width: 2px 0;
-      background: #fff;
+      background: $key-futures-title-bg;
       transform: rotate(0deg) matrix(1, -1, 0, 1, 0, 0);
       content: '';
     }
   }
 
-  p {
-    line-height: 36px;
-  }
-
-  &__wrap {
-
-  }
-
-  &__column {
-
-  }
+  p { line-height: 36px }
 
   &__item {
-    padding-bottom: 30px;
-    color: #282528;
+    padding-top: 30px;
     text-align: center;
 
     &-icon {
@@ -65,7 +55,7 @@
 
       svg {
         width: 100%;
-        fill: #1ab798;
+        fill: $key-futures-svg-fill;
       }
     }
 
@@ -73,7 +63,6 @@
     h3 {
       margin-bottom: 13px;
       font-size: 18px;
-      color: #282528;
       @include main-font2();
     }
 
@@ -100,13 +89,7 @@
       justify-content: space-between;
     }
 
-    &__column {
-      width: calc(50% - 15px);
-    }
-
-    &__item {
-
-    }
+    &__column { width: calc(50% - 15px) }
   }
 }
 
@@ -123,16 +106,14 @@
         top: 0;
         width: 30%;
         height: 100%;
-        background: url("../img/mobile.png") no-repeat center;
+        background: $key-futures-bg-image no-repeat center;
         background-size: contain;
         pointer-events: none;
         content: '';
       }
     }
 
-    &__column {
-      width: 30%;
-    }
+    &__column { width: 30% }
 
     &__item {
       position: relative;
@@ -160,24 +141,18 @@
   .key-futures {
     padding: 118px calc(50% - 485px) 51px;
 
-    &__column {
-      width: 370px;
-    }
+    &__column { width: 370px }
 
     &__wrap {
       margin: 77px -100px 0;
 
-      &:before {
-        width: 426px;
-      }
+      &:before { width: 426px }
     }
 
     &__item {
       padding: 3px 0 97px 92px;
 
-      &-icon {
-        left: 10px;
-      }
+      &-icon { left: 10px }
     }
   }
 }

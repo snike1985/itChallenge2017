@@ -9,31 +9,29 @@
     position: relative;
     width: 42px;
     height: 42px;
-    background: rgba(0, 0, 0, 0.302);
+    background: $social-bg;
     transition: background .3s ease-in-out;
 
-    &:hover {
-      background: #222222;
-    }
+    &:hover { background: $social-bg-hover }
 
     svg {
       @include absoluteCenter();
       width: 50%;
       height: auto;
-      fill: #fff;
+      fill: $social-svg-fill;
     }
   }
 
   &__item_facebook {
-    background: #3b5997;
+    background: $social-bg-facebook;
   }
 
   &__item_twitter {
-    background: #3ec2f3;
+    background: $social-bg-twitter;
   }
 
   &__item_google {
-    background: #e44c41;
+    background: $social-bg-google;
   }
 
   &.social_color {
@@ -43,9 +41,7 @@
       margin-right: 10px;
       border-radius: 50%;
 
-      &:hover {
-        background: #1ab798;
-      }
+      &:hover { background: $social-color-bg-hover }
     }
   }
 }

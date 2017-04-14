@@ -3,7 +3,7 @@
   position: relative;
   padding: 50px 20px 127px;
   font-size: 18px;
-  color: #fff;
+  color: $contact-us-color;
 
   &__bg {
     position: absolute;
@@ -12,11 +12,12 @@
     width: 110%;
     height: 100%;
     z-index: 1;
-    background-image: url("../img/contact-us-bg.jpg");
-    background-color: #000;
+    background-image: $contact-us-bg-image;
+    background-color: $contact-us-bg;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
   }
 
   &__title,
@@ -29,7 +30,7 @@
     font-size: 28px;
     text-align: center;
     text-transform: uppercase;
-    color: #fff;
+    color: $contact-us-title-color;
     @include main-font2();
 
     &:before {
@@ -37,7 +38,7 @@
       bottom: 0;
       width: 160px;
       height: 2px;
-      background: #fff;
+      background: $contact-us-title-color;
       content: '';
     }
 
@@ -48,10 +49,10 @@
       width: 6px;
       height: 4px;
       margin-left: -3px;
-      border-color: #fff;
+      border-color: $contact-us-title-color;
       border-style: solid;
       border-width: 2px 0;
-      background: #262626;
+      background: $contact-us-bg;
       transform: rotate(0deg) matrix(1, -1, 0, 1, 0, 0);
       content: '';
     }
@@ -72,13 +73,13 @@
       display: block;
       margin-bottom: 7px;
       font-size: 20px;
-      @include main-font4();
+      @include main-font3();
     }
 
     p {
       font-size: 12px;
       line-height: 18px;
-      color: rgba(255,255,255,.5);
+      color: $contact-us-text-color;
     }
 
     address {
@@ -86,7 +87,7 @@
       flex-direction: column;
       padding: 10px 0 0 0;
       font-style: normal;
-      color: #bface2;
+      color: $contact-us-address-color;
       font-size: 12px;
 
       a,
@@ -94,7 +95,7 @@
         display: block;
         position: relative;
         margin-bottom: 11px;
-        color: #bface2;
+        color: $contact-us-address-color;
 
         &:before {
           position: absolute;
@@ -102,7 +103,7 @@
           left: 50%;
           width: 0;
           height: 1px;
-          background-color: #bface2;
+          background-color: $contact-us-address-color;
           content: '';
           transition: all .3s ease-in-out;
         }
@@ -121,12 +122,13 @@
   &__form {
     text-align: center;
 
-    input {
+    input,
+    textarea {
       width: 100%;
       height: 40px;
       padding: 0 10px;
-      margin-bottom: 20px;
-      background: #fff;
+      background: $contact-us-field-bg;
+      color: $contact-us-field-color;
       text-align: left;
       font-size: 14px;
       border-radius: 4px;
@@ -134,16 +136,11 @@
     }
 
     textarea {
-      width: 100%;
       height: 120px;
       padding: 10px;
-      margin-bottom: 20px;
-      background: #fff;
-      text-align: left;
-      font-size: 14px;
-      border-radius: 4px;
-      @include main-font1();
     }
+
+    .label-animate__item { margin-bottom: 20px }
   }
 }
 
@@ -199,22 +196,22 @@
       input {
         height: 44px;
         padding: 0 20px;
-        margin-bottom: 31px;
         font-size: 16px;
       }
 
       textarea {
         height: 180px;
         padding: 20px;
-        margin-bottom: 28px;
         font-size: 16px;
       }
+
+      .label-animate__item { margin-bottom: 31px }
 
       &-double {
         display: flex;
         justify-content: space-between;
 
-        input {
+        > * {
           width: calc(50% - 15px);
         }
       }
@@ -228,4 +225,3 @@
   }
 }
 /*---------- /contact-us ---------*/
-

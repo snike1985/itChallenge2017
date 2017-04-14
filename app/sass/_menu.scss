@@ -40,9 +40,9 @@
 
         &:before,
         &:after {
-          background: #fff;
+          background: $menu-btn-color-active;
           box-shadow: 0 2px 6px rgba(0,0,0, 0);
-          transition-delay: 0.001s, 0.3s;
+          transition-delay: .001s, .3s;
         }
       }
     }
@@ -61,7 +61,7 @@
     span {
       height: 2px;
       width: 100%;
-      background: #282528;
+      background: $menu-btn-color;
       font-size: 0;
       transition: background .3s;
       backface-visibility: hidden;
@@ -72,10 +72,10 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background: #282528;
+        background: $menu-btn-color;
         content: '';
         transition-duration: .3s, .3s;
-        transition-delay: .3s, 0.001s;
+        transition-delay: .3s, .001s;
         backface-visibility: hidden;
       }
       &:before {
@@ -104,10 +104,10 @@
     height: 100vh;
     padding: 20px;
     z-index: 1;
-    background-color: rgba(14,180,147,0.9);
+    background-color: $menu-mobile-wrap-bg;
     cursor: default;
     transform: translateX(100%);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s linear;
+    transition: all .3s ease-in-out;
   }
 
   &__item {
@@ -117,8 +117,8 @@
     opacity: 0;
     font-size: 5vh;
     line-height: 8vh;
-    color: #fff;
-    font-weight: 700;
+    color: $menu-mobile-color;
+    @include main-font5();
     text-transform: uppercase;
     text-align: center;
     transform: translateY(100%);
@@ -154,9 +154,7 @@
       transform: translate(0,0);
       background: none;
 
-      &:before {
-        display: none;
-      }
+      &:before { display: none }
     }
 
     &__item {
@@ -164,15 +162,15 @@
       margin-left: 32px;
       font-size: 13px;
       line-height: 20px;
-      color: #282528;
+      color: $menu-color;
       opacity: .6;
-      transform: none;
+      transform: translatez(0);
       transition: opacity .3s ease-in-out 0s;
 
       &:hover,
       &.active {
         opacity: 1;
-        color: #282528;
+        color: $menu-color;
       }
     }
   }

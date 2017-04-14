@@ -10,11 +10,11 @@
     height: 68px;
     margin-right: 16px;
     border-radius: 50%;
-    background: #0098cd;
+    background: $icons-bg;
     transition: background .15s ease-in-out;
 
     &:hover {
-      background: #222222;
+      background: $icons-bg-hover;
 
       .tail {
         animation: tail .3s linear infinite;
@@ -36,7 +36,7 @@
       @include absoluteCenter();
       width: 50%;
       height: auto;
-      fill: #fff;
+      fill: $icons-svg-fill;
     }
   }
 }

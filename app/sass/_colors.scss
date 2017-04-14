@@ -1,34 +1,111 @@
-/*---------- popup ----------*/
-$popup-back: rgba( 0, 0, 0, .5 );
-$popup-close-back: rgba( 255, 255, 255, 1 );
-/*---------- /popup ---------*/
-
-/*---------- websters-select ----------*/
-$websters-select-border: #000;
-$websters-select-popup-back: #fff;
-$websters-select-popup-item-active-color: #fff;
-$websters-select-popup-item-active-back: #f00;
-/*---------- /websters-select ---------*/
-
-/*---------- nice-radio ----------*/
-$nice-radio-after-color: #000;
-$nice-radio-color: #000;
-/*---------- /nice-radio ---------*/
-
-/*---------- nice-checkbox ----------*/
-$nice-checkbox-after-color: #000;
-$nice-checkbox-color: #000;
-/*---------- /nice-checkbox ---------*/
-
 /*---------- btn ----------*/
-$btn-back: #ff0;
-$btn-back-hover: #ffa;
-$btn-back-active: #000;
-$btn-color: #000;
-$btn-color-active: #ff0;
-
-$btn-2-back: #f00;
-$btn-2-back-hover: #f0a;
-$btn-2-back-active: #000;
-$btn-2-color-active: #f0a;
+$btn-color: #fff;
+$btn-bg: #1ab798;
+$btn-bg-hover: #17d0ac;
+$btn-svg-fill: #fff;
 /*---------- /btn ---------*/
+
+/*---------- contact-us ----------*/
+$contact-us-color: #fff;
+$contact-us-bg: #262626;
+$contact-us-bg-image: url("../img/contact-us-bg.jpg");
+$contact-us-title-color: #fff;
+$contact-us-text-color: rgba(255,255,255,.5);
+$contact-us-address-color: #bface2;
+$contact-us-field-color: #282528;
+$contact-us-field-bg: #fff;
+/*---------- /contact-us ---------*/
+
+/*---------- hero ----------*/
+$hero-color: #fff;
+$hero-bg: #262626;
+$hero-bg-image: url("../img/hero-bg.jpg");
+$hero-mobile-image: url("../img/mobile.png");
+$hero-mobile-image-min: url("../img/mobile_min.png");
+/*---------- /hero ---------*/
+
+/*---------- icons ----------*/
+$icons-bg: #0098cd;
+$icons-bg-hover: #222222;
+$icons-svg-fill: #fff;
+/*---------- /icons ---------*/
+
+/*---------- key-futures ----------*/
+$key-futures-color: #282528;
+$key-futures-bg-image: url("../img/mobile.png");
+$key-futures-title-color: #1ab798;
+$key-futures-title-bg: #fff;
+$key-futures-title-line-color: #343c3f;
+$key-futures-svg-fill: #1ab798;
+/*---------- /key-futures ---------*/
+
+/*---------- label-animate ----------*/
+$label-animate-color: #c1c1c1;
+$label-animate-color-focus: #1ab798;
+$label-animate-bg: #fff;
+/*---------- /label-animate ---------*/
+
+/*---------- logo ----------*/
+$logo-color: #1ab798;
+/*---------- /logo ---------*/
+
+/*---------- menu ----------*/
+$menu-mobile-color: #fff;
+$menu-mobile-wrap-bg: rgba(14,180,147,.9);
+$menu-btn-color: #282528;
+$menu-btn-color-active: #fff;
+$menu-color: #282528;
+/*---------- /menu ---------*/
+
+/*---------- reviews ----------*/
+$reviews-color: #282528;
+$reviews-title-color: #1ab798;
+$reviews-title-bg: #fff;
+$reviews-title-line-color: #343c3f;
+$reviews-ava-color: rgb(196, 199, 199);
+$reviews-ava-bg: #fff;
+$reviews-name-color: #062033;
+$reviews-profession-color: #646464;
+$reviews-article-color: #efefef;
+/*---------- /reviews ---------*/
+
+/*---------- site ----------*/
+$site-header-bg: rgb(255, 255, 255);
+$site-header-shadow: rgba(0, 0, 0, 0.22);
+$site-footer-color: rgba(255,255,255,.5);
+$site-footer-border-color: rgba(255,255,255,.61);
+/*---------- /site ---------*/
+
+/*---------- social ----------*/
+$social-bg: rgba(0, 0, 0, 0.302);
+$social-bg-hover: #222222;
+$social-svg-fill: #fff;
+$social-bg-facebook: #3b5997;
+$social-bg-twitter: #3ec2f3;
+$social-bg-google: #e44c41;
+$social-color-bg-hover: #1ab798;
+/*---------- /social ---------*/
+
+/*---------- swiper ----------*/
+$swiper-pagination-bg: #282528;
+$swiper-pagination-bg-active: #1ab798;
+/*---------- /swiper ---------*/
+
+/*---------- team ----------*/
+$team-color: #062033;
+$team-title-color: #1ab798;
+$team-title-bg: #fff;
+$team-title-line-color: #343c3f;
+$team-name-color-hover: #1ab798;
+$team-pic-bg: #1ab798;
+$team-name-color: #062033;
+$team-info-color: #fff;
+$team-info-bg: rgba(14, 180, 147, .851);
+$team-article-color: #efefef;
+/*---------- /team ---------*/
+
+/*---------- watch ----------*/
+$watch-bg: #31d4e7;
+$watch-color: #fff;
+$watch-title-color: #222222;
+/*---------- /watch ---------*/

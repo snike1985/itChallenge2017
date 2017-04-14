@@ -1,1 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../fonts/OpenSansRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSansSemiBold";
+  src: url("../fonts/OpenSansSemiBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/OpenSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+

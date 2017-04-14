@@ -1,0 +1,55 @@
+.label-animate {
+
+  &__item {
+    position: relative;
+    width: 100%;
+
+    &:before {
+      @include absoluteCenterY();
+      left: 10px;
+      padding: 2px;
+      border-radius: 2px;
+      background: $label-animate-bg;
+      color: $label-animate-color;
+      font-size: 16px;
+      transition: all .3s linear;
+      content: attr(data-placeholder);
+      user-select: none;
+    }
+
+    &.label-animate__item_textarea:before {
+      top: 0;
+      transform: translate(0, 10px);
+    }
+
+    &.active:before {
+      top: 0;
+      font-size: 11px;
+      color: $label-animate-color-focus;
+      transform: translate(0, -5px);
+    }
+  }
+  input,
+  textarea {
+    border: none;
+
+    &::-webkit-input-placeholder { color: transparent }
+    &::-moz-placeholder { color: transparent }
+    &:-ms-input-placeholder { color: transparent }
+    &:-moz-placeholder { color: transparent }
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .label-animate {
+
+    &__item {
+
+      &:before { left: 21px }
+
+      &.label-animate__item_textarea:before { transform: translate(0, 20px) }
+
+      &.active:before { transform: translate(0, -5px) }
+    }
+  }
+}

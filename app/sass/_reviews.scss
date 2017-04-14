@@ -2,6 +2,7 @@
 .reviews {
   padding: 50px 20px;
   text-align: center;
+  color: $reviews-color;
 
   &__title,
   h2 {
@@ -11,7 +12,7 @@
     margin-bottom: 42px;
     font-size: 28px;
     text-transform: uppercase;
-    color: #1ab798;
+    color: $reviews-title-color;
     @include main-font2();
 
     &:before {
@@ -19,7 +20,7 @@
       bottom: 0;
       width: 160px;
       height: 2px;
-      background: #343c3f;
+      background: $reviews-title-line-color;
       content: '';
     }
 
@@ -30,19 +31,17 @@
       width: 6px;
       height: 4px;
       margin-left: -3px;
-      border-color: #343c3f;
+      border-color: $reviews-title-color;
       border-style: solid;
       border-width: 2px 0;
-      background: #fff;
+      background: $reviews-title-bg;
       transform: rotate(0deg) matrix(1, -1, 0, 1, 0, 0);
       content: '';
     }
   }
 
 
-  &__slider {
-    min-height: 200px;
-  }
+  &__slider { min-height: 200px }
 
   &__head {
     margin-bottom: 30px;
@@ -56,9 +55,9 @@
     margin-bottom: 20px;
     border-style: solid;
     border-width: 2px;
-    border-color: rgb(196, 199, 199);
+    border-color: $reviews-ava-color;
     border-radius: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: $reviews-ava-bg;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -68,14 +67,14 @@
     display: block;
     margin-bottom: 4px;
     font-size: 16px;
-    color: #062033;
-    font-weight: 600;
+    color: $reviews-name-color;
+    @include main-font4();
   }
 
   &__profession {
     display: block;
     font-size: 12px;
-    color: #646464;
+    color: $reviews-profession-color;
   }
 
   &__text {
@@ -84,7 +83,7 @@
     padding: 0 0 20px 20px;
     font-size: 14px;
     line-height: 20px;
-    color: #282528;
+    color: $reviews-color;
 
     &:before {
       position: absolute;
@@ -93,7 +92,7 @@
       @include main-font3();
       font-size: 60px;
       line-height: normal;
-      color: #efefef;
+      color: $reviews-article-color;
       content: '“';
     }
   }
